@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cs2 Hug</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <span class="logo">🍕</span>
+      <span class="title">Counter Striker Casino</span>
+    </div>
+    <div class="wallet">
+      <span>Balance:</span>
+      <strong id="balance">1000</strong>
+      <span>R$</span>
+      <button id="addFunds" class="btn small">+500</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Caixas de Skins</h1>
+      <p>Abra caixas temáticas e ganhe skins aleatórias com diferentes raridades.</p>
+    </section>
+
+    <section class="games">
+      <h2>Escolha sua Caixa</h2>
+      <div class="grid">
+        <article class="card" data-case="bravo">
+          <div class="card-top ct">
+            <h3>Caixa Comum</h3>
+          </div>
+          <p>Preço: <strong>100</strong> R$</p>
+          <button class="btn play" data-open="bravo">Abrir Caixa</button>
+        </article>
+
+        <article class="card" data-case="inferno">
+          <div class="card-top t">
+            <h3>Caixa Épica</h3>
+          </div>
+          <p>Preço: <strong>200</strong> R$</p>
+          <button class="btn play" data-open="inferno">Abrir Caixa</button>
+        </article>
+      </div>
+    </section>
+
+    <section class="panel hidden" id="panel-bravo">
+      <h2>Caixa Bravo</h2>
+      <div class="controls">
+        <button class="btn primary" id="open-bravo">Abrir por 100 R$</button>
+      </div>
+      <div class="wheel">
+        <div class="wheel-strip" id="wheel-bravo"></div>
+      </div>
+      <div class="result" id="result-bravo"></div>
+      <button class="btn ghost close" data-close="panel-bravo">Fechar</button>
+    </section>
+
+    <section class="panel hidden" id="panel-inferno">
+      <h2>Caixa Inferno</h2>
+      <div class="controls">
+        <button class="btn primary" id="open-inferno">Abrir por 200 R$</button>
+      </div>
+      <div class="wheel">
+        <div class="wheel-strip" id="wheel-inferno"></div>
+      </div>
+      <div class="result" id="result-inferno"></div>
+      <button class="btn ghost close" data-close="panel-inferno">Fechar</button>
+    </section>
+
+    <section class="inventory">
+      <h2>Inventário</h2>
+      <div id="inventory-empty">Nenhuma skin ainda. Abra uma caixa!</div>
+      <div class="inventory-list" id="inventory-list"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Site para entreterimento, não vinculado com a Valve.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
